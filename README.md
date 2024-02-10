@@ -14,11 +14,22 @@ Notice in the screenshot, Copilot only injects line 1 to 32 into the prompt, alt
 
 ## Installation
 
+### Using Homebrew
+
+You can install `concopy` using Homebrew by tapping into our repository and then installing the formula:
+
+```sh
+brew tap markwitt1/tap https://github.com/markwitt1/homebrew-tap
+brew install concopy
+```
+
+### Other
+
 Download the binary for your platform and put it somewhere in your PATH.
 
-## Usage
-
 Run `chmod +x path/to/binary` to make the binary executable.
+
+## Usage
 
 ### By command line arguments
 
@@ -31,9 +42,15 @@ Add a `.concopyuse` file at your project root and populate it with the file / di
 For example:
 
 ```
+
 go.mod
 .github
 main.go
+
 ```
 
 NOTE: On the first run on macOS, the execution will be blocked by the system. You will need to go to `System Settings -> Privacy & Security -> Security` and allow the execution of the binary.
+
+```
+
+```
