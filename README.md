@@ -42,15 +42,9 @@ Add a `.concopyuse` file at your project root and populate it with the file / di
 For example:
 
 ```
-
 go.mod
 .github
 main.go
-
 ```
 
 NOTE: On the first run on macOS, the execution will be blocked by the system. You will need to go to `System Settings -> Privacy & Security -> Security` and allow the execution of the binary.
-
-```
-
-```
