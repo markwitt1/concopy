@@ -1,16 +1,14 @@
 # concopy
 
-concopy (concat-copy) is a small CLI tool thata allows you to quickly paste your codebase into your preferred Generative AI assistant. Use ChatGPT, Bard or any company-internal LLM to write code for you, while being able to choose which context about your codebase to supply.
+concopy (concatenate-copy) is a compact Command Line Interface (CLI) tool designed to facilitate the seamless pasting of your codebase into your preferred Generative AI assistant. Whether you're using ChatGPT, Bard, or any company-internal Language Model, concopy enables you to write code efficiently by allowing you to select the specific context about your codebase to supply and iterate on the code using the AI assistants output.
 
 ![demo](images/demo.gif)
 
-This can sometimes be useful when you want to generate code for a specific part of your codebase, but you don't want to share the entire codebase with the AI.
-Also it can be better than GitHub Copilot in some cases, as it allows you to choose the context of the code you want to generate.
-Copilot's RAG sometimes looks at wrong parts of the codebase, leading to unwanted results.
+concopy proves particularly useful when you need to generate code for a specific segment of your codebase without sharing the entire codebase with the AI. It can sometimes outperform GitHub Copilot by enabling you to select the context of the code you wish to generate. Copilot's RAG occasionally focuses on irrelevant parts of the codebase, leading to undesired results.
 
 ![copilot wrong result](images/copilot_screenshot.png)
 
-Notice in the screenshot, Copilot only injects line 1 to 32 into the prompt, although the file has much more lines.
+As illustrated in the screenshot, Copilot only injects lines 1 to 32 into the prompt, despite the file containing many more lines.
 
 ## Installation
 
@@ -23,21 +21,21 @@ brew tap markwitt1/tap https://github.com/markwitt1/homebrew-tap
 brew install concopy
 ```
 
-### Other
+### Other Methods
 
-Download the binary for your platform and put it somewhere in your PATH.
+Download the binary compatible with your platform and place it somewhere in your PATH.
 
 Run `chmod +x path/to/binary` to make the binary executable.
 
 ## Usage
 
-### By command line arguments
+### By Command Line Arguments
 
 Run `concopy <file1> <file2> <folder1>` to copy the content of the specified files to the clipboard.
 
 ### Using .concopyuse
 
-Add a `.concopyuse` file at your project root and populate it with the file / directory paths separated with line breaks.
+Add a `.concopyuse` file at your project root and populate it with the file/directory paths separated by line breaks.
 
 For example:
 
@@ -47,4 +45,4 @@ go.mod
 main.go
 ```
 
-NOTE: On the first run on macOS, the execution will be blocked by the system. You will need to go to `System Settings -> Privacy & Security -> Security` and allow the execution of the binary.
+NOTE: On the first run on macOS, the system may block the execution. You will need to navigate to `System Settings -> Privacy & Security -> Security` and allow the execution of the binary.
